@@ -9,8 +9,8 @@
 #include <jni.h>
 #include <string>
 #include <map>
-#include "../jniwrap/jni_env_wrapper.hpp"
-#include "../log/log.hpp"
+#include "jniwrap/jni_env_wrap.h"
+#include "log/log.hpp"
 
 namespace jniwrap {
 
@@ -173,10 +173,10 @@ namespace jniwrap {
       }
 
     private:
-      jclass jclz_{nullptr};
-      jobject jobj_{nullptr};
-      jobject jobj_weakref_{nullptr};
       JNIEnv *jni_env_{nullptr};
+      jobject jobj_weakref_{nullptr};
+      jobject jobj_{nullptr};
+      jclass jclz_{nullptr};
       std::map<std::string, jmethodID> method_map_;
   };
 

@@ -1,6 +1,6 @@
 #include <jni.h>
 #include <string>
-#include "jniwrap/jni_env_wrapper.hpp"
+#include "jniwrap/jni_env_wrap.h"
 #include "jniwrap/java_object.hpp"
 
 class HashMap : public jniwrap::JavaObject {
